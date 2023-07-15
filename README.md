@@ -13,5 +13,5 @@ from transformers import pipeline
 
 summarizer = pipeline("summarization", model="zedfum/arman-longformer-8k-finetuned-ensani", tokenizer="zedfum/arman-longformer-8k-finetuned-ensani" , device=0)
 text_to_summarize=""
-summarizer(text_to_summarize, min_length=5, max_length=512)
+summarizer(text_to_summarize, min_length=5, max_length=512,truncation=True)
 ```
